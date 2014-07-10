@@ -3,4 +3,6 @@ android:
   components:
     - build-tools-19.0.2
     - android-19
+  licenses:
+    - android-sdk-license-5be876d5
 script: "./gradlew build"
