@@ -4,7 +4,7 @@ import android.content.SharedPreferences;
 
 import java.util.UUID;
 
-public class AndroidRegardClient extends AbstractRegardClient {
+class AndroidRegardClient extends AbstractRegardClient {
     private final static String REGARD_USERID_KEY = "regard-user-id";
 
     public AndroidRegardClient(SharedPreferences preferences, String organization, String product) {
