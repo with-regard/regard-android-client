@@ -8,3 +8,16 @@ android:
   licenses:
     - '.+'
 script: "./gradlew build"
+
+env:
+  global:
+    secure: "KfZwFDjIeOGN7AGP6G/9d8S/F5j02yK1/s08LUBjGMi5P/tYkf5tp06DWVaQBB/EBFAFrCkPif2tcwAJYwpznz4fwMuGmSjBLFRiVXe92lhgvwb3BSbHaa7Lwuqi/7GTGQxQ4KgZofP4cEcaLR72V7ZnB1CDcHsmhgfOsJRlw7o="
+
+deploy:
+  provider: releases
+  api-key: $GITHUB_TOKEN
+  file: "app/build/outputs/aar/app.aar"
+  skip_cleanup: true
+  on:
+    tags: true
+    all_branches: true
