@@ -29,6 +29,11 @@ abstract class AbstractRegardClient implements RegardClient {
     }
 
     @Override
+    public String getUserDataURL() {
+        return "https://www.withregard.io/dashboard/userevents/" + _organization + '/' + _product + '/' + _userId;
+    }
+
+    @Override
     public void trackEvent(RegardEvent event) {
         new AsyncEventPoster(new RegardListener() {
             @Override
